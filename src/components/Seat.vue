@@ -16,14 +16,15 @@
 
 export default {
   props: {
-    seat: Object
+    seat: Object,
+    user: String
   },
   methods: {
     selectSeat(id) {
       this.$emit("selectSeat", id);
     },
     seatAvaliable (seat) {
-      return !seat.adquirid
+      return !seat.adquirid && (seat.user_id == null || seat.user_id == this.user)
     }
   }
 };

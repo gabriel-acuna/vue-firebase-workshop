@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   
+    <notifications group="foo"/>
     <Room />
   </div>
 </template>
